@@ -56,43 +56,45 @@
     </header>
 
     <main>
-      <section class="section-hero">
-        <h1>Main Title</h1>
-        <button type="submit" data-modal-open>open modal</button>
+      <section class="section-works">
+        <div class="container">
+          <h2>Наши работы</h2>
+          <ul class="work-list">
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-1-desktop.jpg" />
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-2-desktop.jpg" />
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-3-desktop.jpg" />
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-4-desktop.jpg" />
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-5-desktop.jpg" />
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link" href="">
+                <img src="./img/portfolio/portfolio-6-desktop.jpg" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
-    <div class="backdrop" data-backdrop>
-      <div class="modal">
-        <button class="modal__close-btn" type="button" data-modal-close>
-          close modal
-        </button>
-      </div>
-    </div>
-
     <footer></footer>
-
-    <script>
-      const { height: pageHeaderHeight } = document
-        .querySelector('.page-header')
-        .getBoundingClientRect();
-
-      document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
-
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
-    </script>
   </body>
 </html>
