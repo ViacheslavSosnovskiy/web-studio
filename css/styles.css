@@ -59,6 +59,25 @@ p {
   padding-bottom: 10px;
 }
 
+.navigation__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background-color: rgb(60, 63, 226);
+
+  transform: scaleX(0);
+  transition: transform 250ms linear;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  /* width: 100%; */
+  transform: scaleX(1);
+}
+
 /* ============ CONTACT LIST ============== */
 .contacts__list {
   display: flex;
@@ -84,12 +103,30 @@ p {
   margin-bottom: 30px; */
 }
 
-/* .work-list__item:nth-child(3n) {
-  margin-right: 0px;
-  margin-bottom: 0px;
-} */
+.work-list__wrapper {
+  position: relative;
+}
 
-/* ========== HERO ============== */
+.overlay {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(221, 142, 113, 0.3);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 250ms linear, opacity 250ms linear;
+}
+
+.work-list__item:hover .overlay,
+.work-list__item:focus .overlay {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+/* ========================= HERO ======================= */
 .section-hero {
   background-position: center;
   background-repeat: no-repeat;
@@ -107,6 +144,76 @@ p {
     url('../img/hero/hero-bg-desktop.jpg');
 }
 
+.button {
+  margin: 0 auto;
+  min-width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+
+  padding: 10px 32px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: white;
+
+  transition: background-color 250ms linear;
+  /* передаем через запятую что нужно анимировать */
+  /* transition: background-color 250ms linear, color 250ms linear */
+
+  /* transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear; */
+}
+
+.button:hover,
+.button:focus {
+  background-color: #046cc2;
+}
+
+.modal__open-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal__open-btn::before,
+.modal__open-btn::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.modal__open-btn::before {
+  margin-right: 10px;
+  background-color: #fff;
+
+  transition: transform 250ms linear;
+}
+
+.modal__open-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  background-color: #f19696;
+
+  transform: translateY(calc(-70% + 45px));
+
+  transition: transform 250ms linear;
+}
+
+.modal__open-btn:hover::before,
+.modal__open-btn:focus::before {
+  transform: translateY(-35px);
+}
+
+.modal__open-btn:hover::after,
+.modal__open-btn:focus::after {
+  transform: translateY(-15px);
+}
+
 /* ========= BACKDROP ========== */
 .backdrop {
   position: fixed;
@@ -115,7 +222,8 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(216, 117, 36, 0.5);
-  /* opacity: 1; */
+  opacity: 1;
+  transition: opacity 250ms linear;
 }
 
 .backdrop.is-hidden {
@@ -123,16 +231,21 @@ p {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 400px;
   height: 300px;
-
   background-color: #fff;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
 }
 
 .modal__close-btn {
