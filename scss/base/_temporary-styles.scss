@@ -1,0 +1,348 @@
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  .container {
+    width: 1230;
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* =======   HEADER  ============== */
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: block;
+    margin-right: 40px;
+  }
+  
+  .navigation__list {
+    display: flex;
+  }
+  
+  .navigation__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  .navigation__link {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .navigation__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background-color: rgb(60, 63, 226);
+  
+    transform: scaleX(0);
+    transition: transform 250ms linear;
+  }
+  
+  .navigation__link:hover,
+  .navigation__link:focus {
+    /* width: 100%; */
+    transform: scaleX(1);
+  }
+  
+  /* ============ CONTACT LIST ============== */
+  .contacts__list {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .contacts__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  /* ================+++++++++   PORTFOLIO   ++++++++++++++================== */
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px;
+  }
+  
+  .work-list__item {
+    width: 380px;
+    margin: 30px;
+    /* width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px; */
+  }
+  
+  .work-list__wrapper {
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(221, 142, 113, 0.3);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms linear, opacity 250ms linear;
+  }
+  
+  .work-list__item:hover .overlay,
+  .work-list__item:focus .overlay {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  
+  /* ========================= HERO ======================= */
+  .section-hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-color: #2f303a;
+  
+    height: 500px;
+    max-width: 1600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../img/hero/hero-bg-desktop.jpg');
+  }
+  
+  .button {
+    margin: 0 auto;
+    min-width: 200px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: none;
+  
+    padding: 10px 32px;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: white;
+  
+    transition: background-color 250ms linear;
+    /* передаем через запятую что нужно анимировать */
+    /* transition: background-color 250ms linear, color 250ms linear */
+  
+    /* transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: linear; */
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: #046cc2;
+  }
+  
+  .modal__open-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modal__open-btn::before,
+  .modal__open-btn::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .modal__open-btn::before {
+    margin-right: 10px;
+    background-color: #fff;
+  
+    transition: transform 250ms linear;
+  }
+  
+  .modal__open-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    background-color: #f19696;
+  
+    transform: translateY(calc(-70% + 45px));
+  
+    transition: transform 250ms linear;
+  }
+  
+  .modal__open-btn:hover::before,
+  .modal__open-btn:focus::before {
+    transform: translateY(-35px);
+  }
+  
+  .modal__open-btn:hover::after,
+  .modal__open-btn:focus::after {
+    transform: translateY(-15px);
+  }
+  
+  /* ========= BACKDROP ========== */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 117, 36, 0.5);
+    opacity: 1;
+    transition: opacity 250ms linear;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 600px;
+    height: 300px;
+    background-color: #fff;
+  
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms linear;
+  }
+  
+  .modal__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* =========== form ============ */
+  
+  .modal-form {
+    width: 400px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .modal-form__label {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .modal-form__input {
+    width: 100%;
+    padding: 10px 20px;
+    padding-left: 40px;
+  }
+  
+  .modal-form__text {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+  
+    transform: translateY(-50%);
+  }
+  
+  .modal-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+  
+    transform: translateY(-50%);
+  
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: teal;
+  }
+  
+  .modal-form__input:focus {
+    border-color: red;
+  }
+  
+  .modal-form__input:focus ~ .modal-form__text {
+    color: #046cc2;
+  }
+  
+  .modal-form__input:focus ~ .modal-form__icon {
+    background-color: #046cc2;
+  }
+  
+  .modal-form__label:focus-within > .modal-form__text,
+  .modal-form__input:not(:placeholder-shown) ~ .modal-form__text {
+    transform: translateY(-50px);
+  }
+  /* ====== checkbox ====== */
+  
+  .modal-from__label-checkbox {
+    display: flex;
+  }
+  
+  .modal-from__input-checkbox {
+    appearance: none;
+  }
+  
+  .modal-from__icon-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: teal;
+  
+    border: 2px solid #2a2a2a;
+  }
+  
+  .modal-from__input-checkbox:checked + .modal-from__icon-checkbox {
+    background-color: #046cc2;
+    border: 2px solid #046cc2;
+    border-radius: 4px;
+    background-image: url('../../');
+    background-size: contain;
+    background-origin: border-box;
+  }
+  
+  .modal-from__input-checkbox:checked ~ .modal-from__text-checkbox {
+    transform: translateX(20px);
+    /* transform: scale(1.2) translateX(20px); */
+  }
+  

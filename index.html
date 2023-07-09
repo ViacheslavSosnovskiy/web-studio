@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="page-header">
@@ -52,6 +52,20 @@
             </a>
           </li>
         </ul>
+
+        <div>
+          <button
+            class="menu-button"
+            type="menu-button"
+            data-menu-button
+            aria-expanded="false"
+          >
+            <svg width="20" height="20" aria-label="mobile menu switch">
+              <use class="icon-cross" href="./img/icons.svg#close-btn"></use>
+              <use class="icon-menu" href="./img/icons.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -94,27 +108,15 @@
 
     <footer></footer>
 
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+
     <script>
       const { height: pageHeaderHeight } = document
         .querySelector('.page-header')
         .getBoundingClientRect();
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
-
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
     </script>
   </body>
 </html>
