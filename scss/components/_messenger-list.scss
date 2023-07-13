@@ -1,0 +1,35 @@
+.messenger-list {
+  display: flex;
+  justify-content: center;
+}
+
+.messenger-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.messenger-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $primaryTextColor;
+
+  transition: $animation, $animationBgc;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    color: $primaryWhiteColor;
+  }
+}
+
+.messenger-list__link--footer {
+  fill: $primaryWhiteColor;
+  background-color: $secondaryBgc;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}

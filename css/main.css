@@ -98,6 +98,14 @@ img {
   color: #2196f3;
 }
 
+.logo__footer-wrapper {
+  color: #2196f3;
+}
+
+.logo--white-color {
+  color: #ffffff;
+}
+
 .navigation-list {
   display: none;
 }
@@ -123,7 +131,7 @@ img {
 
 .navigation-list__link {
   color: #212121;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-list__link:hover, .navigation-list__link:focus {
@@ -200,7 +208,7 @@ img {
 
 .contacts-list__link {
   color: #757575;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
 }
@@ -287,6 +295,157 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.footer {
+  background-color: #2f303a;
+}
+
+.footer__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__wrapper {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    text-align: left;
+  }
+}
+
+.address {
+  font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .address {
+    margin-bottom: 60px;
+  }
+}
+
+.adress__list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .adress__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.adress__link {
+  color: #757575;
+}
+
+.adress__link--active {
+  color: #ffffff;
+}
+
+.footer__subtitle {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .form-signup {
+    margin-top: 60px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-signup {
+    margin-left: auto;
+  }
+}
+
+.form-signup__subtitle {
+  display: block;
+}
+
+.form-signup__input {
+  padding: 15px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .form-signup__input {
+    display: block;
+    width: 450px;
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-signup__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.messenger-list {
+  display: flex;
+  justify-content: center;
+}
+
+.messenger-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.messenger-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+}
+
+.messenger-list__link:hover, .messenger-list__link:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.messenger-list__link--footer {
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.messenger-list__link--footer:hover, .messenger-list__link--footer:focus {
+  background-color: #2196f3;
 }
 
 .backdrop {
