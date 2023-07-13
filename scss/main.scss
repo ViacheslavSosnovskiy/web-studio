@@ -1,5 +1,11 @@
 @import './utils/variables';
-@import './base/temporary-styles';
-@import './components/container';
+@import './base/common';
+@import './base/container';
 
-@import './components/page-header';
+@import './layouts/header';
+@import './components/logo';
+@import './components/navigation/navigation';
+
+@import './components/backdrop';
+@import './components/modal';
+@import './components/form';
