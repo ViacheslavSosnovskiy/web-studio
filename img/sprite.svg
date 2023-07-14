@@ -66,7 +66,7 @@
 <symbol id="modal-close" viewBox="0 0 32 32">
 <path d="M22.4 10.782L21.218 9.6l-4.685 4.685L11.848 9.6l-1.182 1.182 4.685 4.685-4.685 4.685 1.182 1.182 4.685-4.685 4.685 4.685 1.182-1.182-4.685-4.685 4.685-4.685z"/>
 </symbol>
-<symbol id="icon-send" viewBox="0 0 32 32">
+<symbol id="telegram" viewBox="0 0 32 32">
 <path d="M32 0L0 18l10.227 3.788L26 7 14.002 23.186l.01.004-.012-.004V32l5.735-6.691L27 28l5-28z"/>
 </symbol>
 <symbol id="menu-cross" viewBox="0 0 32 32">

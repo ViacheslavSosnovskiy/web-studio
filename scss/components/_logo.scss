@@ -4,27 +4,29 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
-  color: $primaryTextColor;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 88px;
-  }
+  color: $secondaryTextColor;
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
-    margin-right: 93px;
+  }
+
+  &__color-wrapper {
+    color: $accentColor;
+  }
+
+  &--white-color {
+    color: $primaryWhiteColor;
   }
 }
 
-.logo__header-wrapper {
-  color: $accentColor;
+.header__logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 90px;
+  }
 }
 
-.logo__footer-wrapper {
-  color: $accentColor;
-}
-
-.logo--white-color {
-  color: $primaryWhiteColor;
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
 }

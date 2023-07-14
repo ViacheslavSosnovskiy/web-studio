@@ -1,4 +1,4 @@
-%button {
+.button {
   margin: 0 auto;
   min-width: 200px;
   font-weight: 700;
@@ -10,46 +10,13 @@
 
   padding: 10px 32px;
   border-radius: 4px;
+  background-color: $accentColor;
+  color: $primaryWhiteColor;
 
-  transition: background-color 250ms linear;
-}
-
-.accent-button {
-  @extend %button;
-  background-color: #2196f3;
-  color: white;
+  transition: $animation;
 
   &:hover,
   &:focus {
-    background-color: #046cc2;
+    background-color: $hoverAccentColor;
   }
 }
-
-// .button {
-//   margin: 0 auto;
-//   min-width: 200px;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.88;
-//   letter-spacing: 0.06em;
-//   cursor: pointer;
-//   border: none;
-
-//   padding: 10px 32px;
-//   border-radius: 4px;
-//   background-color: #2196f3;
-//   color: white;
-
-//   transition: background-color 250ms linear;
-//   /* передаем через запятую что нужно анимировать */
-//   /* transition: background-color 250ms linear, color 250ms linear */
-
-//   /* transition-property: background-color;
-//     transition-duration: 250ms;
-//     transition-timing-function: linear; */
-// }
-
-// .button:hover,
-// .button:focus {
-//   background-color: #046cc2;
-// }
