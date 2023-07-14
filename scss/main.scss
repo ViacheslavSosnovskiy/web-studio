@@ -1,6 +1,8 @@
 @import './utils/variables';
+@import './utils/visually-hidden';
 @import './base/common';
 @import './base/container';
+@import './components/section';
 
 @import './layouts/header';
 @import './components/logo';
@@ -8,6 +10,8 @@
 
 @import './layouts/hero';
 @import './components/button';
+
+@import './layouts/features';
 
 @import './layouts/footer';
 @import './components/messenger-list';
