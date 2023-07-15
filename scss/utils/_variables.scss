@@ -7,12 +7,15 @@ $secondaryTextColor: #212121;
 $secondaryWhiteColor: #eeecf0;
 
 $primaryBgc: #2f303a;
+$primaryTransparentBgc: rgba(47, 48, 58, 0.8);
 $secondaryBgc: rgba(255, 255, 255, 0.1);
+$secondaryWhiteBgc: #afb1b8;
 
 $mainFont: Roboto, sans-serif;
 
 $animation: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $animationBgc: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$animationBorder: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 $linearGradient: linear-gradient(
   to bottom,
