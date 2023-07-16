@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  color: $primaryTextColor;
+  fill: $primaryTextColor;
 
   transition: $animation, $animationBgc;
   border-radius: 50%;
@@ -20,7 +20,7 @@
   &:hover,
   &:focus {
     background-color: $accentColor;
-    color: $primaryWhiteColor;
+    fill: $primaryWhiteColor;
   }
 }
 

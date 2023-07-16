@@ -1,0 +1,62 @@
+.team {
+  background-color: $secondaryWhiteColor;
+}
+
+.team__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+.team__item {
+  background-color: $primaryWhiteColor;
+  box-shadow: $shadow;
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.team__subtitle {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $secondaryTextColor;
+}
+
+.team__description {
+  margin-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $primaryTextColor;
+}
+
+.team__card-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
