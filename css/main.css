@@ -296,18 +296,6 @@ img {
   fill: #2196f3;
 }
 
-.menu-button .icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
-}
-
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -321,7 +309,7 @@ img {
   transform: translateX(-50%);
   max-width: 480px;
   padding: 48px 40px;
-  background-color: #2196f3;
+  background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
@@ -337,6 +325,103 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.mobile-menu__button-cross {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-flex;
+  color: #212121;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.mobile-menu__button-cross:hover, .mobile-menu__button-cross:focus {
+  fill: #2196f3;
+}
+
+.mobile-navigation {
+  margin-bottom: 60px;
+}
+
+.mobile-navigation__item {
+  margin-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 40px;
+  line-height: 1.18;
+}
+
+.mobile-navigation__link {
+  color: #212121;
+}
+
+.mobile-navigation__link:hover, .mobile-navigation__link:focus {
+  color: #2196f3;
+}
+
+.mobile-navigation__link--active {
+  color: #2196f3;
+}
+
+.mobile-contact {
+  margin-bottom: 40px;
+}
+
+.mobile-contact__item {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mobile-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contact__link {
+  color: #757575;
+}
+
+.mobile-contact__link--active {
+  font-size: 34px;
+  line-height: 1.18;
+  color: #2196f3;
+}
+
+.mobile-messenger {
+  display: flex;
+}
+
+.mobile-messenger__item {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.mobile-messenger__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mobile-messenger__item:not(:last-child)::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  right: -10px;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.mobile-messenger__link {
+  color: #2196f3;
 }
 
 .hero {

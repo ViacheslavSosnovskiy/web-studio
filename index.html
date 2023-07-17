@@ -65,25 +65,23 @@
           </li>
         </ul>
 
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-        >
-          <svg
-            class="menu-button__icon"
-            width="40"
-            height="40"
-            aria-label="mobile menu switch"
-          >
-            <use class="icon-cross" href="./img/sprite.svg#menu-cross"></use>
-            <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="menu-button__icon" width="40" height="40">
+            <use href="./img/sprite.svg#menu"></use>
           </svg>
         </button>
 
         <!-- mobile  menu  -->
         <div class="mobile-menu" data-menu>
+          <button
+            class="mobile-menu__button-cross"
+            type="button"
+            data-menu-close
+          >
+            <svg class="mobile-menu__icon" width="40" height="40">
+              <use href="./img/sprite.svg#menu-cross"></use>
+            </svg>
+          </button>
           <ul class="mobile-navigation">
             <li class="mobile-navigation__item">
               <a
