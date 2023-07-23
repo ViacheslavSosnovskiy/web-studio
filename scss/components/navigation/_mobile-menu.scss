@@ -7,10 +7,6 @@
   fill: $secondaryTextColor;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
   &:hover,
   &:focus {
     fill: $accentColor;
@@ -45,6 +41,13 @@
   @media screen and (max-width: 400px) {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+.mobile-menu,
+.menu-button {
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 

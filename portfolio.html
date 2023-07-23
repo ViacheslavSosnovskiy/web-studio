@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,31 +19,27 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-  </head>
-  <body>
     <header class="header">
       <div class="container header__container">
-        <a class="logo" href="./index.html">
-          <span class="logo__header-wrapper">Web</span>Studio
+        <a class="logo header__logo" href="./index.html" lang="en">
+          <span class="logo__color-wrapper">Web</span>Studio
         </a>
 
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-list__item">
+              <a class="navigation-list__link" href="./index.html"> Студия </a>
+            </li>
+            <li class="navigation-list__item">
               <a
-                class="navigation-list__link"
-                href="./index.html"
+                class="navigation-list__link navigation-list__link--active"
+                href="./portfolio.html"
               >
-                Studio
+                Портфолио
               </a>
             </li>
             <li class="navigation-list__item">
-              <a class="navigation-list__link navigation-list__link--active" href="./portfolio.html">
-                Portfolio
-              </a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link"> Contacts </a>
+              <a class="navigation-list__link" href=""> Контакты </a>
             </li>
           </ul>
         </nav>
@@ -67,40 +63,36 @@
           </li>
         </ul>
 
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-        >
-          <svg
-            class="menu-button__icon"
-            width="40"
-            height="40"
-            aria-label="mobile menu switch"
-          >
-            <use class="icon-cross" href="./img/sprite.svg#menu-cross"></use>
-            <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="menu-button__icon" width="40" height="40">
+            <use href="./img/sprite.svg#menu"></use>
           </svg>
         </button>
 
         <!-- mobile  menu  -->
         <div class="mobile-menu" data-menu>
+          <button
+            class="mobile-menu__button-cross"
+            type="button"
+            data-menu-close
+          >
+            <svg class="mobile-menu__icon" width="40" height="40">
+              <use href="./img/sprite.svg#menu-cross"></use>
+            </svg>
+          </button>
           <ul class="mobile-navigation">
             <li class="mobile-navigation__item">
+              <a href="./index.html" class="mobile-navigation__link">Студия</a>
+            </li>
+            <li class="mobile-navigation__item">
               <a
-                href="./index.html"
+                href="./portfolio.html"
                 class="mobile-navigation__link mobile-navigation__link--active"
-                >Studio</a
+                >Портфолио</a
               >
             </li>
             <li class="mobile-navigation__item">
-              <a href="./portfolio.html" class="mobile-navigation__link"
-                >Portfolio</a
-              >
-            </li>
-            <li class="mobile-navigation__item">
-              <a href="" class="mobile-navigation__link">Contacts</a>
+              <a href="" class="mobile-navigation__link">Контакты</a>
             </li>
           </ul>
           <ul class="mobile-contact">
@@ -120,16 +112,16 @@
           </ul>
           <ul class="mobile-messenger">
             <li class="mobile-messenger__item">
-              <a href="" class="mobile-messenger__link">Instagram</a>
+              <a href="" class="mobile-messenger__link" lang="en">Instagram</a>
             </li>
             <li class="mobile-messenger__item">
-              <a href="" class="mobile-messenger__link">Twitter</a>
+              <a href="" class="mobile-messenger__link" lang="en">Twitter</a>
             </li>
             <li class="mobile-messenger__item">
-              <a href="" class="mobile-messenger__link">Facebook</a>
+              <a href="" class="mobile-messenger__link" lang="en">Facebook</a>
             </li>
             <li class="mobile-messenger__item">
-              <a href="" class="mobile-messenger__link">LinkedIn</a>
+              <a href="" class="mobile-messenger__link" lang="en">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -144,27 +136,44 @@
         <h2 class="visually-hidden">Проекты работ</h2>
 
         <div class="container">
-          <ul class="filters__list">
+          <ul class="filters__list js-tags">
             <li class="filters__item">
-              <button class="button filters__button" type="button">Все</button>
+              <button
+                class="button filters__button"
+                type="button"
+              >
+                Все
+              </button>
             </li>
             <li class="filters__item">
-              <button class="button filters__button" type="button">
+              <button
+                class="button filters__button"
+                type="button"
+              >
                 Веб-сайты
               </button>
             </li>
             <li class="filters__item">
-              <button class="button filters__button" type="button">
+              <button
+                class="button filters__button"
+                type="button"
+              >
                 Приложения
               </button>
             </li>
             <li class="filters__item">
-              <button class="button filters__button" type="button">
+              <button
+                class="button filters__button"
+                type="button"
+              >
                 Дизайн
               </button>
             </li>
             <li class="filters__item">
-              <button class="button filters__button" type="button">
+              <button
+                class="button filters__button"
+                type="button"
+              >
                 Маркетинг
               </button>
             </li>
@@ -585,9 +594,7 @@
                   </p>
                 </div>
                 <div class="cards__footer">
-                  <h3 class="cards__subtitle" lang="en">
-                    Growing Business
-                  </h3>
+                  <h3 class="cards__subtitle" lang="en">Growing Business</h3>
                   <p class="cards__description">Приложение</p>
                 </div>
               </a>
@@ -700,7 +707,8 @@
         </form>
       </div>
     </footer>
-    
+
     <script src="./js/mobile-menu.js"></script>
+    <script src="js/filter-portfolio.js"></script>
   </body>
 </html>

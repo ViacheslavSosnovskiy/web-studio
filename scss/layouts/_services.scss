@@ -34,10 +34,15 @@
 
   transition: $animation, $animationBgc;
 
-  &:hover,
-  &:focus {
+  // &:hover,
+  // &:focus {
+  //   color: $primaryWhiteColor;
+  //   background-color: $accentColor;
+  // }
+
+  &--active {
     color: $primaryWhiteColor;
-    background-color: $accentColor;
+    background-color: rgb(148, 243, 6);
   }
 }
 

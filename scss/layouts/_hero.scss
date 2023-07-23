@@ -27,40 +27,40 @@
   max-width: 767px;
 
   background-image: $linearGradient,
-    url('../../img/hero/mobile/hero-bg-mobile.jpg');
+    url('../img/hero/mobile/hero-bg-mobile.jpg');
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: $linearGradient,
-      url('../../img/hero/mobile/hero-bg-mobile@2x.jpg');
+      url('../img/hero/mobile/hero-bg-mobile@2x.jpg');
   }
 
   @media screen and (min-width: 768px) {
     max-width: 1199px;
 
     background-image: $linearGradient,
-      url('../../img/hero/tablet/hero-bg-tablet.jpg');
+      url('../img/hero/tablet/hero-bg-tablet.jpg');
   }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: $linearGradient,
-      url('../../img/hero/tablet/hero-bg-tablet@2x.jpg');
+      url('../img/hero/tablet/hero-bg-tablet@2x.jpg');
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
 
     background-image: $linearGradient,
-      url('../../img/hero/desktop/hero-bg-desktop.jpg');
+      url('../img/hero/desktop/hero-bg-desktop.jpg');
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
       background-image: $linearGradient,
-        url('../../img/hero/desktop/hero-bg-desktop@2x.jpg');
+        url('../img/hero/desktop/hero-bg-desktop@2x.jpg');
     }
   }
 }
